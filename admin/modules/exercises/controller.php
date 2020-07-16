@@ -47,7 +47,7 @@ switch ($action) {
 			$cur = $mydb->loadResultList();
 			foreach ($cur as $result) { 
 				$sql = "INSERT INTO tblstudentquestion (`ExerciseID`, `LessonID`, `StudentID`,`Question`, `CA`, `CB`, `CC`, `CD`, `QA`) 
-				VALUES ('".$ExerciseID."','".$_POST['LESSON']."','".$result->StudentID."','".$_POST['Question']."','".$_POST['ChoiceA']."','".$_POST['ChoiceB']."','".$_POST['ChoiceC']."','".$_POST['ChoiceD']."','".$_POST['Answer']."')";
+				VALUES ('".$ExerciseID."','".$_POST['Lesson']."','".$result->StudentID."','".$_POST['Question']."','".$_POST['ChoiceA']."','".$_POST['ChoiceB']."','".$_POST['ChoiceC']."','".$_POST['ChoiceD']."','".$_POST['Answer']."')";
 				$mydb->setQuery($sql);
 				$mydb->executeQuery();
 			}
