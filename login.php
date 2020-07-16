@@ -116,7 +116,7 @@ if (isset($_POST['btnLogin'])) { //btnLogin es el name de escrito antes
             // redirect(web_root."index.php");
             //$_SESSION ARAY ASOCIATIVO, nombre de sesion StudenID
             echo $_SESSION['StudentID'];
-            
+            header("Location: index.php");
         } else {
             message("Account does not exist! Please contact Administrator.", "error");
             redirect(web_root . "login.php");
