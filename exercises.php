@@ -10,7 +10,7 @@
 			</thead>
 			<tbody>
 				<?php 
-				$sql = "SELECT * FROM tbllesson";
+				$sql = "SELECT * FROM tbllesson as l  inner join tblexercise as e on l.LessonID=e.LessonID"; //Mostrar tabla donde solo alla ejercicios
 				$mydb->setQuery($sql);
 				$cur = $mydb->loadResultList();
 				foreach ($cur as $result) {
