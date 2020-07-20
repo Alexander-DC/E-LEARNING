@@ -6,6 +6,8 @@
                       // $autonum = New Autonumber();
                       // $res = $autonum->single_autonumber(2);
 
+                      
+
                        ?> 
  <form class="form-horizontal span6" action="controller.php?action=add" method="POST" enctype="multipart/form-data">
 
@@ -44,8 +46,7 @@
 
                    <div class="form-group">
                     <div class="col-md-11">
-                      <label class="col-md-2 control-label" for=
-                      "Category">Select File Type:</label>
+                      <label class="col-md-2 control-label" for="Category">Select File Type:</label>
 
                       <div class="col-md-10">
                         <input name="deptid" type="hidden" value="">
@@ -59,9 +60,7 @@
 
                    <div class="form-group">
                     <div class="col-md-11">
-                      <label class="col-md-2" align = "right"for=
-                      "file">Upload File:</label>
-
+                      <label class="col-md-2 control-label" align = "right"for="file">Upload File:</label>
                       <div class="col-md-10">
                       <input type="file" name="file"/>
                       </div>
@@ -74,8 +73,9 @@
                       "idno"></label>
 
                       <div class="col-md-10">
-                       <button class="btn btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span>  Save</button> 
-                         </div>
+                       <button class="btn btn-primary btn-sm" name="save" type="submit" ><span class="fa fa-save fw-fa"></span> Agregar</button> 
+                      </div>
+                      
                     </div>
                   </div> 
         </form> 

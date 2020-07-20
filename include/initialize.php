@@ -26,4 +26,9 @@ require_once(LIB_PATH.DS."autonumbers.php");
 require_once(LIB_PATH.DS."students.php"); 
 //load the database connection
 require_once(LIB_PATH.DS."database.php");
+//Extra_database
+require_once("actual/conexion.php");
+require_once("actual/metodo.php");
+
+
 ?>

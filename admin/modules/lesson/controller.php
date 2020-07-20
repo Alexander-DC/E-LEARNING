@@ -29,6 +29,9 @@ switch ($action) {
 	function doInsert(){ 
 		if(isset($_POST['save'])){ 
 
+			if($_POST['LessonChapter']!='' and $_POST['LessonTitle']!='' and $_POST['Category']!=''){
+
+			
 			$chapter = $_POST['LessonChapter'];
 			$title  = $_POST['LessonTitle'];
 			$category = $_POST['Category'];
@@ -45,7 +48,10 @@ switch ($action) {
 
 			message("Lesson has been saved in the database.", "success");
 			redirect("index.php");
-			
+			}else{
+			message("Complete todos los campos", "info");
+			redirect("index.php?view=add");
+			}
 		}  
 	}
 
