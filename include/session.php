@@ -1,7 +1,7 @@
 <?php
-session_start(); //before we store information of our member, we need to start first the session
+session_start(); //Comenzamos la sesion siempre
 	
-	//create a new function to check if the session variable member_id is on set
+	//Verificar el userID del estudiante
 	function logged_in() {
 		return isset($_SESSION['USERID']);
         
@@ -48,12 +48,12 @@ function admin_confirm_logged_in() {
 	    $_SESSION['message'] = $msg;
 	    $_SESSION['msgtype'] = $msgtype;
 	  } else {
-	    // then this is "get message"
-			return $message;
+	    // Obtener mensaje
+			//return $message;
 	  }
 	}
 	function check_message(){
-	
+	//
 		if(isset($_SESSION['message'])){
 			if(isset($_SESSION['msgtype'])){
 				if ($_SESSION['msgtype']=="info"){
@@ -64,7 +64,8 @@ function admin_confirm_logged_in() {
 									
 				}elseif($_SESSION['msgtype']=="success"){
 					echo  '<div class="alert alert-success">' . $_SESSION['message'] . '</div>';
-				}	
+				}
+				//Destruye la varaible de sesion	
 				unset($_SESSION['message']);
 	 			unset($_SESSION['msgtype']);
 	   		}
@@ -79,7 +80,7 @@ function admin_confirm_logged_in() {
 	    $_SESSION['active'] = $key; 
 	  } else {
 	    // then this is "get message"
-			return $keyactive;
+			//return $keyactive;
 	  }
   
  }

@@ -8,7 +8,7 @@ if (isset($_SESSION['StudentID'])) {
 
  
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <!-- Required meta tags-->
@@ -17,6 +17,8 @@ if (isset($_SESSION['StudentID'])) {
     <meta name="description" content="Colorlib Templates">
     <meta name="author" content="Colorlib">
     <meta name="keywords" content="Colorlib Templates">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- Title Page-->
     <title>Au Register Forms by Colorlib</title>
@@ -39,7 +41,7 @@ if (isset($_SESSION['StudentID'])) {
     <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
         <div class="wrapper wrapper--w680">
             <div class="card card-1">
-                <div class="card-heading"></div>
+                <div class="card-heading"></div> <!--Imagen encabezado-->
                 <div class="card-body">
                     <h2 class="title">Registration Info</h2>
                     <form method="POST" action="register.php">
@@ -69,7 +71,36 @@ if (isset($_SESSION['StudentID'])) {
                             <a href="login.php">Back to Login</a>
                         </div>
                     </form>
+                    <?php 
+if (isset($_POST['btnRegister'])) {
+    
+    if($_POST['FNAME']!='' or  $_POST['LNAME']!=""or  $_POST['ADDRESS']!=""or  $_POST['PHONE']!=""or  $_POST['USERNAME']!=""or  $_POST['PASS']!="" ){
+    $student = New Student(); 
+    $student->Fname         = $_POST['FNAME']; 
+    $student->Lname         = $_POST['LNAME'];
+    $student->Address       = $_POST['ADDRESS']; 
+    $student->MobileNo         = $_POST['PHONE'];  
+    $student->STUDUSERNAME      = $_POST['USERNAME'];
+    $student->STUDPASS      = sha1($_POST['PASS']); 
+    $student->create();  
+
+    
+    
+    ?><div class="alert alert-success mt-4" role="alert">
+    Creado Exitosamente
+  </div>
+    <?php
+    }else{
+        ?> <div class="alert alert-danger mt-4" role="alert">
+        Por Favor complete todos los campos
+      </div>
+      <?php
+    }
+}
+
+?> 
                 </div>
+                
             </div>
         </div>
     </div>
@@ -83,6 +114,10 @@ if (isset($_SESSION['StudentID'])) {
 
     <!-- Main JS-->
     <script src="js/global.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
@@ -92,22 +127,3 @@ if (isset($_SESSION['StudentID'])) {
 
 
 
-<?php 
-if (isset($_POST['btnRegister'])) {
-    # code...  
-
-    $student = New Student(); 
-    $student->Fname         = $_POST['FNAME']; 
-    $student->Lname         = $_POST['LNAME'];
-    $student->Address       = $_POST['ADDRESS']; 
-    $student->MobileNo         = $_POST['PHONE'];  
-    $student->STUDUSERNAME      = $_POST['USERNAME'];
-    $student->STUDPASS      = sha1($_POST['PASS']); 
-    $student->create();  
-
-    message("Your now succefully registered. You can login now!","success");
-    redirect("register.php");
-
-}
-
-?> 

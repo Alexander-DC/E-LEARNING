@@ -15,7 +15,6 @@ $score  = $res->SCORE;
 
 
 
-
 message("Exercises already submitted.","sucess");
 redirect("index.php?q=quizresult&id={$lessonid}&score={$score}");
 

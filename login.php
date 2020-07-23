@@ -42,7 +42,7 @@ if (isset($_SESSION['StudentID'])) {
 
   <div class="limiter">
     <div class="container-login100">
-           <?php check_message();?>
+           <?php check_message()//Llama a la alerta;?>
       <div class="wrap-login100">
         <div class="login100-pic js-tilt" data-tilte>
           <img src="<?php echo web_root; ?>images/janobe.png" alt="IMG">
