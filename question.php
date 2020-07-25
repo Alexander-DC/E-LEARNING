@@ -27,7 +27,7 @@ redirect("index.php");
   $cur = $mydb->loadResultList();
 
   foreach ($cur as $res) {
-  	# code...
+  	# code...2qadasdasdasd
  
 ?> 
 <form> 
