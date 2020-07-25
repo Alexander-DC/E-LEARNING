@@ -20,12 +20,17 @@
     CLASE : <?php echo $res->LessonChapter;?> | TITULO : <?php echo $res->LessonTitle;?>
     </div>
     <div class="col-5 float-left">
-    <?php 
+    <?php  //Comienza
+    if($cur){
     foreach ($cur as $result) {
     ?>
-    <a href="index.php?q=question&id=<?php echo $result->LessonID;?> type="button" class="btn btn-success btn-block text-light">Ejercicios propuestos</a>
+    <a href="index.php?q=question&id=<?php echo $result->LessonID;?>" type="button" class="btn btn-success btn-block text-light">Ejercicios propuestos</a>
     <?php
-    }
+    }}else{
+      ?>
+<a href="#" type="button" class="btn btn-warning btn-block text-info">Aun no hay ejercicios que ver</a>
+      <?php
+    }//Termina
     ?>
     </div>
     

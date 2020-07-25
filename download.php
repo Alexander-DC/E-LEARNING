@@ -32,10 +32,11 @@
 	<h3>VIDEO</h3>
 	<div class="table-responsive">
 		<table id="example2" class="table table-bordered">
-			<thead>
+		<thead>
 				<th width="2%">#</th>
-				<th>Decription</th>
-				<th width="10%">Action</th>
+				<th>CLASE</th>
+				<th>TEMA</th>
+				<th width="2%">Action</th>
 			</thead>
 			<tbody>
 				<?php 
@@ -46,6 +47,7 @@
 					# code...
 					echo '<tr>';
 					echo '<td></td>';
+					echo '<td>'.$result->LessonChapter.'</td>';
 					echo '<td>'.$result->LessonTitle.'</td>'; 
 					echo '<td><a href="'.web_root.'admin/modules/lesson/'.$result->FileLocation.'" class="btn btn-xs btn-info" download><i class="fa fa-download"></i> Downlaod</a></td>';
 					echo '</tr>';

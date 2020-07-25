@@ -34,7 +34,8 @@
 		<table id="example2" class="table table-bordered">
 			<thead>
 				<th width="2%">#</th>
-				<th>Decription</th>
+				<th>CLASE</th>
+				<th>TEMA</th>
 				<th width="2%">Action</th>
 			</thead>
 			<tbody>
@@ -46,6 +47,7 @@
 					# code...
 					echo '<tr>';
 					echo '<td></td>';
+					echo '<td>'.$result->LessonChapter.'</td>';
 					echo '<td>'.$result->LessonTitle.'</td>'; 
 					echo '<td><a href="index.php?q=playvideo&id='.$result->LessonID.'" class="btn btn-xs btn-info"><i class="fa fa-play"></i> Play Video</a></td>';
 					echo '</tr>';

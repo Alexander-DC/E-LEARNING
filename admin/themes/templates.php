@@ -14,13 +14,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     </head>
     <body>
-        <div class="navbar navbar-fixed-top">
+    <!-- Encabezado o navbar a mostrar -->
+    <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
                         <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html">E-Learning System </a>
-                    <div class="nav-collapse collapse navbar-inverse-collapse">
-                         
+                        <!--Nabvar de la parte derecha-->
+                    <div class="nav-collapse collapse navbar-inverse-collapse">                    
                         <ul class="nav pull-right">
                             <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Add
                                 <b class="caret"></b></a>
@@ -41,16 +42,17 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- /.nav-collapse -->
+                    <!--Fin /.nav-collapse -->
                 </div>
             </div>
             <!-- /navbar-inner -->
         </div>
-        <!-- /navbar -->
+        
         <div class="wrapper">
             <div class="container">
                 <div class="row">
                     <div class="span3">
+                        <!--Parte izquierda, Fila de bonoes-->
                         <div class="sidebar">
                             <ul class="widget widget-menu unstyled">
                                 <li class="active"><a href="<?php echo web_root; ?>/admin"><i class="menu-icon icon-dashboard"></i>Dashboard
@@ -80,6 +82,7 @@
                         <!--/.sidebar-->
                     </div>
                     <div class="span9">
+                        <!--Parte de la zona de datos, dashboard -->
                         <div class="content">  
                             <div class="module">
                             <?php  check_message(); ?> 
@@ -92,12 +95,13 @@
            </div>
           </div>
  
-
+        <!--Footer o pie de pagina-->
          <div class="footer">
             <div class="container">
                 <b class="copyright">&copy; 2020 My First Class </b>Todos los derechos reservados
             </div>
         </div>
+        
         <script src="<?php echo web_root; ?>e_admin/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
         <script src="<?php echo web_root; ?>e_admin/scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
         <script src="<?php echo web_root; ?>e_admin/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

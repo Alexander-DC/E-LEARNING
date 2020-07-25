@@ -15,7 +15,7 @@ $view = (isset($_GET['view']) && $_GET['view'] != '') ? $_GET['view'] : '';
 	case 'list' :
 		$content    = 'list.php';		
 		break;
-
+		//Lista de estudiante
 	case 'add' :
 		$content    = 'add.php';		
 		break;

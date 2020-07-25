@@ -19,7 +19,8 @@
 
 </style>
 
-  <div class="btn-controls">
+<!--Espacio libre, dashboard-->
+<div class="btn-controls">
     <div class="btn-box-row row-fluid">
         <a href="#" class="btn-box big span4"><i class=" icon-random"></i><b>65%</b>
             <p class="text-muted">

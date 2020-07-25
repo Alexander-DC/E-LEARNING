@@ -13,5 +13,5 @@ if(!isset($_SESSION['USERID'])){
 <h2><?php echo $title ; ?></h2>
 <p style="font-size: 18px;font-weight: bold;">Chapter : <?php echo $res->LessonChapter;?> | Title : <?php echo $res->LessonTitle;?></p>
 <div class="container">
-	<embed src="<?php echo web_root.'admin/modules/lesson/'.$res->FileLocation; ?>" type="application/pdf" width="100%" height="400px" />
+	<embed src="<?php echo web_root.'admin/modules/lesson/'.$res->FileLocation; ?>" type="application/pdf" width="74%" height="600px" />
 </div> 

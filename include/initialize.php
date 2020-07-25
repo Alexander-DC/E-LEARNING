@@ -24,6 +24,7 @@ require_once(LIB_PATH.DS."lessons.php");
 require_once(LIB_PATH.DS."exercises.php"); 
 require_once(LIB_PATH.DS."autonumbers.php"); 
 require_once(LIB_PATH.DS."students.php"); 
+
 //load the database connection
 require_once(LIB_PATH.DS."database.php");
 //Extra_database
