@@ -2,8 +2,27 @@
 require_once("include/initialize.php");  
 
 $studentid = $_SESSION['StudentID'];
-$exersiceid = $_POST['ExerciseID'];
-$value = $_POST['Value'];
+$lessonid=$_POST['LessonID'];
+//arrays
+$exersiceid=$_POST['ExerciseID'];
+$value=$_POST['Value'];
+
+
+$exercise_array=array();
+
+ foreach($_POST['ExerciseID'] as $option_num => $option_val){
+	array_push($exercise_array,$option_num);
+ }
+	echo $exercise_sep=implode(",",$exercise_array);
+
+ echo " otro";
+ foreach($_POST['Value'] as $option_num => $option_val){
+	echo $option_val."<br>";
+	
+ }
+
+
+
 
 
 $sql = "SELECT * FROM `tblexercise` WHERE  `ExerciseID`='{$exersiceid}'";
@@ -37,6 +56,3 @@ if ($maxrow>0) {
 	$mydb->setQuery($sql);
 	$mydb->executeQuery(); 
 }
-
-
-?>
