@@ -43,17 +43,4 @@ for ($i=0; $i <count($exercise_array) ; $i++) {
 	$mydb->executeQuery(); 
 }
 
-
-$sql = "SELECT * From tblscore WHERE ExerciseID = '{$exersiceid}' AND StudentID='{$studentid}'";
-$mydb->setQuery($sql);
-$row = $mydb->executeQuery();
-$maxrow = $mydb->num_rows($row);
-
-if ($maxrow>0) { 
-	$sql = "UPDATE tblscore SET Score='{$score}' WHERE ExerciseID = '{$exersiceid}' AND StudentID='{$studentid}'";  
-	$mydb->setQuery($sql);
-	$mydb->executeQuery();
-
-}
-
-
+require_once("processscore.php");
