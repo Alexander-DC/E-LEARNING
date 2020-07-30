@@ -45,7 +45,7 @@ switch ($action) {
 			// $user->USERID 		= $_POST['user_id'];
 			$user->NAME 		= $_POST['user_name'];
 			$user->UEMAIL		= $_POST['user_email'];
-			$user->PASS			=sha1($_POST['user_pass']);
+			$user->PASS			=sha1($_POST['user_pass']); //Criptografia
 			$user->TYPE			= "Administrator" ;// $_POST['user_type'];
 			$user->create();
 			$id =  $mydb->insert_id();

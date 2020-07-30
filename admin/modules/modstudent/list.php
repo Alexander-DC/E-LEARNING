@@ -7,7 +7,7 @@
 	}
 </style> 
       <div class="module-head"> 
-            <h1 >List of Student</h1> 
+            <h1 >List of Student<a href="index.php?view=add" class="btn btn-primary">New</a></h1> 
        		 
        		</div> 
 			    <form action="controller.php?action=delete" Method="POST">  					

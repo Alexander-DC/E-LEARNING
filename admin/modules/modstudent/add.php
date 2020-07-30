@@ -8,31 +8,17 @@
           <!-- /.col-lg-12 -->
        </div>
 
-                 <div class="form-group">
-                    <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "IDNO">Id No.:</label>
-
-                      <div class="col-md-8">
-                         <input class="form-control input-sm" id="IDNO" name="IDNO" placeholder=
-                            "Student Id" type="Text" value="" required>
-                      </div>
-                    </div>
-                  </div>
-
+                 
                 <div class="form-group">
                     <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "FNAME">First Name:</label>
-
+                      <label class="col-md-4 control-label" for="FNAME">First Name:</label>
                       <div class="col-md-8">
-                         <input class="form-control input-sm" id="FNAME" name="FNAME" placeholder=
-                            "First Name" type="text" value="" required>
+                         <input class="form-control input-sm" id="FNAME" name="FNAME" placeholder= "First Name" type="text" value="" required>
                       </div>
                     </div>
                   </div>
 
-                   <div class="form-group">
+                   <!--<div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
                       "MNAME">Middle Name:</label>
@@ -42,12 +28,12 @@
                             "Middle Name" type="text" value="" required>
                       </div>
                     </div>
-                  </div>
+                  </div>-->
+                  
 
                   <div class="form-group">
                     <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "LNAME">Last Name:</label>
+                      <label class="col-md-4 control-label" for="LNAME">Last Name:</label>
 
                       <div class="col-md-8">
                          <input class="form-control input-sm" id="LNAME" name="LNAME" placeholder=
@@ -56,16 +42,24 @@
                     </div>
                   </div>
 
-
-                   <div class="form-group">
+                  <div class="form-group">
                     <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "COURSE">Course:</label>
+                      <label class="col-md-4 control-label" for="ADDRESS">Address:</label>
 
+                      <div class="col-md-8">
+                         <input class="form-control input-sm" id="ADDRESS" name="ADDRESS" placeholder=
+                            "Address" type="text" value=""  required>
+                      </div>
+                    </div>
+                  </div>
+
+                   <!--<div class="form-group">
+                    <div class="col-md-8">
+                      <label class="col-md-4 control-label" for="COURSE">Course:</label>
                       <div class="col-md-8">
                             <select class="form-control input-sm" name="COURSE" id="COURSE">
 
-                              <?php  
+                              <?php   /*
                               $mydb->setQuery("SELECT * 
                                       FROM  `tblcourse`");
                               $cur = $mydb->loadResultList();
@@ -73,14 +67,14 @@
                             foreach ($cur as $result) { ?>
 
                               <option value="<?php echo $result->COURSEID; ?>"><?php echo $result->DESCRIPTION; ?></option>
-                                   <?php } ?>
+                                   <?php } */?>
                               </select>
          
                       </div>
                     </div>
-                  </div>
+                  </div>-->
 
-
+                  <!--
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
@@ -93,48 +87,35 @@
                         </select>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
+                  <!--
                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
                       "yearpickerfrom">School Year:</label>
 
-                        <!-- has a limit <div class="col-md-4 input-append date" id="dpYears" data-date="12-02-2012" data-date-format="mm/dd/yyyy" data-date-viewmode="years"> -->
                        <div class="col-md-2 input-append date"    data-date-format="yyyy" data-date-viewmode="years">
                     
                          <input   class="form-control input-sm" id="date_pickerfrom" name="yearpickerfrom" placeholder="yyyy"   type="text" value="" size="4">
-                    <!--   <span class="add-on"><i class="glypicon-calendar"></i></span> -->
                       </div>
                        <label class="col-md-1 control-label" for=
                       "To"> To </label>
-                        <!-- has a limit <div class="col-md-4 input-append date" id="dpYears" data-date="12-02-2012" data-date-format="mm/dd/yyyy" data-date-viewmode="years"> -->
                        <div class="col-md-2 input-append date"    data-date-format="yyyy" data-date-viewmode="years">
                     
                          <input   class="form-control input-sm" id="date_pickerto" name="yearpickerto" placeholder="yyyy"   type="text" value="" size="4">
-                    <!--   <span class="add-on"><i class="glypicon-calendar"></i></span> -->
                       </div>
                     </div>
-                  </div>
-
+                  </div> 
+                    ->          
 
                
 
 
-<!-- 
-                  <div class="form-group">
-                    <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "ADDRESS">Address:</label>
 
-                      <div class="col-md-8">
-                         <input class="form-control input-sm" id="ADDRESS" name="ADDRESS" placeholder=
-                            "Address" type="text" value=""  required>
-                      </div>
-                    </div>
-                  </div>
-                   -->
-            <!--       <div class="form-group">
+                  
+                  
+                   <div class="form-group">
                     <div class="col-md-8">
                       <label class="col-md-4 control-label" for=
                       "EMAIL">Email Address:</label>
@@ -188,27 +169,31 @@
  -->
                    <div class="form-group">
                     <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "PHONE">Contact No.:</label>
-
+                      <label class="col-md-4 control-label" for="PHONE">Contact No.:</label>
                       <div class="col-md-8">
-                         <input class="form-control input-sm" id="PHONE" name="PHONE" placeholder=
-                            "Contact Number" type="text" value="" required>
+                         <input class="form-control input-sm" id="PHONE" name="PHONE" placeholder="Contact Number" type="text" value="" required>
                       </div>
                     </div>
                   </div>
 
                     <div class="form-group">
                     <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "EMAILADD">Email Address:</label>
-
+                      <label class="col-md-4 control-label" for="User">Usuario</label>
                       <div class="col-md-8">
-                         <input class="form-control input-sm" id="EMAILADD" name="EMAILADD" placeholder=
-                            "Example@gmail.com" type="email" value="" required>
+                         <input class="form-control input-sm" id="User" name="User" placeholder=
+                            "User" type="text" value="" required>
                       </div>
                     </div>
                   </div>
+                  <div class="form-group">
+                    <div class="col-md-8">
+                      <label class="col-md-4 control-label" for="IDNO">Contraseña:</label>
+                      <div class="col-md-8">
+                         <input class="form-control input-sm" id="IDNO" name="Contrasena" placeholder="Student Id" type="Password" value="" required>
+                      </div>
+                    </div>
+                  </div>
+
 
  
                <!--    <div class="form-group">
@@ -224,8 +209,7 @@
              -->
                    <div class="form-group">
                     <div class="col-md-8">
-                      <label class="col-md-4 control-label" for=
-                      "idno"></label>
+                      <label class="col-md-4 control-label" for="idno"></label>
 
                       <div class="col-md-8">
                          <button class="btn btn_kcctc" name="studsave" type="submit" ><strong>Save</strong></button>

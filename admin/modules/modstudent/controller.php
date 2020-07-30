@@ -45,24 +45,26 @@ function doInsert(){
 					
 						  
 						$student = New Student();
-						$student->IDNO 			= $_POST['IDNO'];
-						$student->FNAME 		= $_POST['FNAME'];
-						$student->MNAME 		= $_POST['MNAME'];
-						$student->LNAME 		= $_POST['LNAME'];
-						// $student->ADDRESS 		= $_POST['ADDRESS'];
-						// $student->RELIGION 		= $_POST['RELIGION'];
-						// $student->STATUS 		= $_POST['STATUS']; 
-						$student->PHONE 		= $_POST['PHONE'];
-						$student->EMAILADD 		= $_POST['EMAILADD'];
-						$student->STUDPASS 		= sha1($_POST['IDNO']);
+						
+						$student->Fname 		= $_POST['FNAME'];
+						$student->Lname 		= $_POST['LNAME'];
+						$student->Address 		= $_POST['ADDRESS'];
+						$student->MobileNo 		= $_POST['PHONE'];
+						$student->STUDUSERNAME 		= $_POST['User'];
+						$student->STUDPASS 		= sha1($_POST['Contrasena']);
 						// $student->PROIMAGE 		= $location;
+						//$student->IDNO 			= $_POST['IDNO'];
+						// $student->RELIGION 		= $_POST['RELIGION'];
+						// $student->STATUS 		= $_POST['STATUS'];
+						//$student->MNAME 		= $_POST['MNAME'];
 						$student->create(); 
- 
+						
+						/* nO SE USA
 						$parent = New Parents();
 						$parent->IDNO 			= $_POST['IDNO'];
 						$parent->create(); 
 
-
+						
 						$schoolyear = New Schoolyear();
 						$schoolyear->IDNO 			= $_POST['IDNO'];
 						$schoolyear->SYFROM 		= $_POST['yearpickerfrom'];
@@ -71,7 +73,7 @@ function doInsert(){
 						$schoolyear->COURSEID 		= $_POST['COURSE']; 
 						$schoolyear->create();	
 
-
+						*/
 						// $work = New Work();
 						// $work->IDNO 			= $_POST['IDNO'];
 						// $work->create();
@@ -105,7 +107,7 @@ function doInsert(){
 			$student->update($_POST['IDNO']);
 
 
-
+			/*
 			$schoolyear = New Schoolyear();
 			$schoolyear->IDNO 			= $_POST['IDNO'];
 			$schoolyear->SYFROM 		= $_POST['yearpickerfrom'];
@@ -113,7 +115,7 @@ function doInsert(){
 			$schoolyear->SEMESTER 		= $_POST['SEMESTER'];
 			$schoolyear->COURSEID 		= $_POST['COURSE']; 
 			$schoolyear->update($_POST['SYID']);	
- 
+			*/
 
 			message("[". $_POST['LNAME'] ."] has been updated!", "success");
 			redirect("index.php");
@@ -137,14 +139,14 @@ function doInsert(){
 
 			$student = New student();
 			$student->delete($id[$i]);
-
+			/*
  			$sy = new Schoolyear();
  			$sy->delete($id[$i]);
 
 
 			$parent = New Parents();
 			$parent->delete($id[$i]);
-
+			*/
 		
 			message("student has been Deleted!","info");
 			redirect('index.php');
@@ -245,13 +247,13 @@ function doInsert(){
 
 			$student = New student();
 			$student->delete($_GET['id']);
-
+			/*
  			$sy = new Schoolyear();
  			$sy->deleteAll($_GET['id']);
 
  			$work = new WOrk();
  			$work->deleteAll($_GET['id']);
-
+			*/
 
  			message("student already removed!","info");
 			redirect('index.php');
