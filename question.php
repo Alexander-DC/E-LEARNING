@@ -32,7 +32,7 @@ if ($score != null) {
 			<div><?php echo $res->Question; ?></div>
 			<div class="col-md-3"><input class="radios" type="radio" id="ChoiceA" data-id="<?php echo $res->ExerciseID; ?>" name="Value[<?php echo $res->ExerciseID;?>]" value=" <?php echo $res->ChoiceA; ?>"> A. <?php echo $res->ChoiceA; ?></div>
 			<div class="col-md-3"><input class="radios" type="radio" id="ChoiceB" data-id="<?php echo $res->ExerciseID; ?>" name="Value[<?php echo $res->ExerciseID; ?>]" value="<?php echo $res->ChoiceB; ?>"> B. <?php echo $res->ChoiceB; ?></div>
-			<div class="col-md-3"><input class="radios" type="radio" id="ChoiceC" data-id="<?php echo $res->ExerciseID; ?>" name="Value[ <?php echo $res->ExerciseID; ?>]" value="<?php echo $res->ChoiceC; ?>"> C. <?php echo $res->ChoiceC; ?></div>
+			<div class="col-md-3"><input class="radios" type="radio" id="ChoiceC" data-id="<?php echo $res->ExerciseID; ?>" name="Value[<?php echo $res->ExerciseID; ?>]" value="<?php echo $res->ChoiceC; ?>"> C. <?php echo $res->ChoiceC; ?></div>
 			<div class="col-md-3"><input class="radios" type="radio" id="ChoiceD" data-id="<?php echo $res->ExerciseID; ?>" name="Value[<?php echo $res->ExerciseID; ?>]" value="<?php echo $res->ChoiceD; ?>"> D. <?php echo $res->ChoiceD; ?></div>
 			
 			<input type="hidden" name="ExerciseID[<?php echo $res->ExerciseID;?>]" value="<?php echo  $res->ExerciseID; ?>">
