@@ -13,13 +13,13 @@ $values_array=array();
  foreach($_POST['ExerciseID'] as $option_num => $option_val){ //Obtener los exercID enviado
 	array_push($exercise_array,$option_num);
  }
-	echo $exercise_sep=implode(",",$exercise_array);
+	//echo $exercise_sep=implode(",",$exercise_array);
 
- echo " otro";
+ //echo " otro";
  foreach($_POST['Value'] as $option_num => $option_val){ //Obtener las respuestas
 	array_push($values_array,$option_val);
  }
- echo $values_sep=implode(",",$values_array);
+ //echo $values_sep=implode(",",$values_array);
 ////////////////////////////
 
 
